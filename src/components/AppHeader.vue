@@ -1,11 +1,14 @@
 <script>
 import AppHeaderItemLinkVue from './AppHeaderItemLink.vue';
+import AppHeaderJumbotron from './AppHeaderJumbotron.vue';
+
 
 
 export default {
     components: {
-        AppHeaderItemLinkVue
-    },
+    AppHeaderItemLinkVue,
+    AppHeaderJumbotron
+},
     data() {
         return {
             navMenu: [
@@ -34,6 +37,9 @@ export default {
                     
                 </div>
            </div>
+           <div class="jumbotron">
+            <AppHeaderJumbotron />
+           </div>
  
         </div>
         
@@ -48,10 +54,15 @@ export default {
 
 
 header {
-    background-image: url(../img/home-page-slider.jpg)
+    background-image: url(../img/home-page-slider.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .nav {
     @include flex();
+    padding-top: 0.2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem ;
     .logo {
         @include flex(row, flex-start, center, nowrap);
         font-size: 0.8rem;
@@ -64,6 +75,9 @@ header {
         gap: 1rem;
         font-size: 0.8rem;
     }
+
+   
+    
 }
 
 
