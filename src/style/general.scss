@@ -1,5 +1,27 @@
+@import '/src/style/partial/variables';
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-white;
+}
+
+.container-xl {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-lg {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-sm {
+    width: 60%;
+    margin: 0 auto;
 }
