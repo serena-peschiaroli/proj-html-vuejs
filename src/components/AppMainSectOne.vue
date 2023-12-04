@@ -1,5 +1,18 @@
 <script>
+import AppMainSectionOneListElementVue from "./AppMainSectionOneListElement.vue"
 export default {
+    components: {
+        AppMainSectionOneListElementVue,
+    },
+    data() {
+        return {
+            listItems: [
+                { iconClass: 'fa-regular fa-heart', number: '2032', text: 'text1' },
+                { iconClass: 'fa-solid fa-globe', number: '132', text: 'text2' },
+                { iconClass: 'fa-solid fa-dollar-sign', number: '3.8M', text: 'text3' },
+            ]
+        }
+    }
 
 }
 
@@ -17,6 +30,8 @@ export default {
 
             </div>
             <div class="col-s">
+                <AppMainSectionOneListElementVue v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" />
+
 
             </div>
         </div>
@@ -45,6 +60,7 @@ export default {
             background-image: url(../img/home-content-bg-1.jpg);
             background-position: center;
             background-size: cover;
+            color: $primary-white;
         }
     }
 }
