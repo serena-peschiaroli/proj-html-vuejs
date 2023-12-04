@@ -37,7 +37,6 @@ export default {
     .jumbo-title, .jumbo-subtitle {
         text-align: center;
         padding: 1rem;
-        margin-top: 2rem;
 
     }
 }
