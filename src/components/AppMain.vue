@@ -1,9 +1,11 @@
 <script>
 import AppMainSectOneVue from './AppMainSectOne.vue';
+import AppMainSectTwo from './AppMainSectTwo.vue';
 
 export default {
     components: {
-        AppMainSectOneVue
+        AppMainSectOneVue,
+        AppMainSectTwo,
     },
     data() {
         return {
@@ -16,6 +18,7 @@ export default {
 
 <template>
     <AppMainSectOneVue />
+    <AppMainSectTwo />
 
 </template>
 

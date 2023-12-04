@@ -1,8 +1,12 @@
 <script>
 import AppMainSectionOneListElementVue from "./AppMainSectionOneListElement.vue"
+import AppMainTitle from "./AppMainTitle.vue";
+
 export default {
     components: {
         AppMainSectionOneListElementVue,
+        AppMainTitle,
+       
     },
     data() {
         return {
@@ -10,7 +14,9 @@ export default {
                 { iconClass: 'fa-regular fa-heart', number: '2032', text: 'text1' },
                 { iconClass: 'fa-solid fa-globe', number: '132', text: 'text2' },
                 { iconClass: 'fa-solid fa-dollar-sign', number: '3.8M', text: 'text3' },
-            ]
+            ],
+            mainTitle: ' Every Moment Counts',
+           
         }
     }
 
@@ -22,14 +28,16 @@ export default {
     <section class="section-one">
         <div class="row">
             <div class="col-l">
-                <h1> LOREM IPSUM</h1>
-                <hr>
+                <AppMainTitle :mainTitle="mainTitle" :isCentered="false"/>
+                
+                
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem animi ipsa et necessitatibus nesciunt reiciendis veritatis mollitia aliquid. </p>
                 <p>Temporibus doloremque, officia aperiam aspernatur fugit sint maxime optio beatae hic. Maiores.</p>
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis ex illum, accusantium dolore, amet, consequatur</p>
 
             </div>
             <div class="col-s">
+
                 <AppMainSectionOneListElementVue v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" />
 
 
@@ -54,6 +62,7 @@ export default {
         .col-l {
             width: 70%;
             padding: 5rem;
+            text-align: left;
         }
         .col-s {
             width: 30%;
