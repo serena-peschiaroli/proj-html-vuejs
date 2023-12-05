@@ -2,8 +2,14 @@
 export default {
     props: {
         image: String,
+        title: String,
         text: String,
 
+    },
+    methods: {
+        getImagePath(image) {
+            return `/src/img/${image}`;
+        }
     }
 
 }
@@ -13,7 +19,7 @@ export default {
 
     <div class="img-element">
         <div class="photo">
-            <img :src="image" alt="Photo">
+            <img :src="getImagePath(image)" alt="Photo">
         </div>
         <div class="text">
              <p>{{ text }}</p>

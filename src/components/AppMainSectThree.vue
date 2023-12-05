@@ -20,11 +20,6 @@ export default {
             ],
         }
     },
-    methods: {
-        getImagePath(image) {
-            return `/src/img/${image}`;
-        }
-    }
 }
 
 </script>
@@ -35,7 +30,7 @@ export default {
             <AppMainTitleVue :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
 
             <div class="list-element">
-                <AppSectThreePhotoList v-for="(image, index) in imageListElements" :key="index" :image="getImagePath(image.image)" />
+                <AppSectThreePhotoList v-for="(image, index) in imageListElements" :key="index" :image="image.image" />
             </div>
 
         </div>

@@ -2,12 +2,14 @@
 import AppMainSectOneVue from './AppMainSectOne.vue';
 import AppMainSectTwo from './AppMainSectTwo.vue';
 import AppMainSectThree from './AppMainSectThree.vue';
+import AppMainSectFour from './AppMainSectFour.vue';
 
 export default {
     components: {
         AppMainSectOneVue,
         AppMainSectTwo,
         AppMainSectThree,
+        AppMainSectFour,
     },
     data() {
         return {
@@ -22,6 +24,7 @@ export default {
     <AppMainSectOneVue />
     <AppMainSectTwo />
     <AppMainSectThree />
+    <AppMainSectFour />
 
 </template>
 
