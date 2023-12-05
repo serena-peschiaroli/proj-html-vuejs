@@ -47,6 +47,7 @@
             @include flex(column, center, center, wrap);
 
             }
+            
         }
        
        

@@ -52,7 +52,7 @@ export default {
 <template>
 
     <section>
-        <div class="container-lg">
+        <div class="container-xs">
             <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
             <div class="article-wrapper">
                 <div class="selected-article">
@@ -86,7 +86,7 @@ export default {
 @use "../style/partial/mixin" as *;
 
 
-.container-lg{
+.container-xs{
     padding: 1rem;
 
     .article-wrapper {

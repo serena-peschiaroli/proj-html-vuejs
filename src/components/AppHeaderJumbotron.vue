@@ -1,7 +1,18 @@
 <script>
 export default {
-
+    props: {
+        title: String,
+        subtitle: String,
+    },
+    
+    
+    computed: {
+        uppercasetitle: function() {
+      return this.title.toUpperCase();
+        }
+    }
 }
+
 
 </script>
 
@@ -9,10 +20,10 @@ export default {
 
     <div class="container-sm">
 
-        <h1 class="jumbo-title">
-            MAKE A DIFFERENCE
+        <h1 class="title">
+            {{ uppercasetitle}}
         </h1>
-        <h3 class="jumbo-subtitle"> Subtitles lorem ipsum</h3>
+        <h3 class="subtitle"> {{ subtitle}}</h3>
 
         <div class="btn-wrapper">
             <h4>Btn here </h4> 
@@ -34,7 +45,8 @@ export default {
     height: 16rem;
     color: $primary-white;
 
-    .jumbo-title, .jumbo-subtitle {
+    .title, .subtitle {
+        
         text-align: center;
         padding: 1rem;
 

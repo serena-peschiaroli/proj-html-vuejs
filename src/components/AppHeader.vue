@@ -11,6 +11,8 @@ export default {
 },
     data() {
         return {
+            title: 'make a difference',
+            subtitle: 'lorem ipsum dolor',
             navMenu: [
                 {id: 1, text: 'Home'},
                 {id: 2, text: 'Mission'},
@@ -38,7 +40,7 @@ export default {
                 </div>
            </div>
            <div class="jumbotron">
-            <AppHeaderJumbotron />
+            <AppHeaderJumbotron :title="title" subTitle="subTitle"/>
            </div>
  
         </div>

@@ -3,6 +3,8 @@ import AppMainSectOneVue from './AppMainSectOne.vue';
 import AppMainSectTwo from './AppMainSectTwo.vue';
 import AppMainSectThree from './AppMainSectThree.vue';
 import AppMainSectFour from './AppMainSectFour.vue';
+import AppMainSectFive from './AppMainSectFive.vue';
+import AppFooter from './AppFooter.vue';
 
 export default {
     components: {
@@ -10,6 +12,8 @@ export default {
         AppMainSectTwo,
         AppMainSectThree,
         AppMainSectFour,
+        AppMainSectFive,
+        AppFooter
     },
     data() {
         return {
@@ -25,12 +29,14 @@ export default {
     <AppMainSectTwo />
     <AppMainSectThree />
     <AppMainSectFour />
+    <AppMainSectFive />
+    <AppFooter />
+
 
 </template>
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
-@use "../style/partial/variables" as *;
 @use "../style/partial/mixin" as *;
 
 </style>

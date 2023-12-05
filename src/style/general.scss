@@ -1,5 +1,6 @@
 @import '/src/style/partial/variables';
 @import '@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 
@@ -15,6 +16,7 @@ img {
 
 body {
     background-color: $primary-white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container-xl {
@@ -29,5 +31,10 @@ body {
 
 .container-sm {
     width: 60%;
+    margin: 0 auto;
+}
+
+.container-xs {
+    width: 50%;
     margin: 0 auto;
 }
