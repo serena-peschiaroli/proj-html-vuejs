@@ -47,7 +47,7 @@ export default {
     }
 
     hr {
-        width: 25%;
+        width: 10%;
         border-top: 2px solid $primary-gold;
     }
 

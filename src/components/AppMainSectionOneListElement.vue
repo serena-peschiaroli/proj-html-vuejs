@@ -4,6 +4,7 @@
             iconClass: String,
             number: String,
             text: String,
+            isAcolumn: Boolean,
         }
 
     }
@@ -11,7 +12,7 @@
 
 <template>
     <div class="list-element">
-        <div class="icon-number">
+        <div :class="['icon-number', isAcolumn? 'isColumn' : 'isrow']">
           <i :class="iconClass"> </i>
           <span>{{ number }}</span>
         </div>
@@ -33,11 +34,21 @@
         padding-top: 1rem;
 
         .icon-number {
-            @include flex(row, center, center, nowrap);
             font-size: 1.8rem;
             gap: 0.5rem;
             padding: 0.5rem;
+
+
+
+            &.isrow {
+            @include flex(row, center, center, nowrap);
+             }
+             &.isColumn {
+            @include flex(column, center, center, wrap);
+
+            }
         }
+       
        
     }
 </style>

@@ -38,7 +38,7 @@ export default {
             </div>
             <div class="col-s">
 
-                <AppMainSectionOneListElementVue v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" />
+                <AppMainSectionOneListElementVue v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" :isAcolumn="false" />
 
 
             </div>
@@ -70,6 +70,7 @@ export default {
             background-position: center;
             background-size: cover;
             color: $primary-white;
+            padding: 1.5rem;
         }
     }
 }

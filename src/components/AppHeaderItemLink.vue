@@ -29,14 +29,20 @@ export default {
 
 ul {
     list-style-type: none;
+
     li {
-        @include flex();
+        &::after{
+            border-bottom: 2px solid $primary-gold;
+        }
     }
+   
     
     a {
+        text-decoration: none;
+        
    
-    color: $primary-gold;
-    @include flex();
+        color: $primary-gold;
+    
 
     
     }

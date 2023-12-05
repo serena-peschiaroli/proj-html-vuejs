@@ -49,7 +49,6 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
-@use "../style/partial/variables" as *;
 @use "../style/partial/mixin" as *;
 
 
@@ -59,21 +58,26 @@ header {
     background-size: cover;
 }
 .nav {
-    @include flex();
-    padding-top: 0.2rem;
+    @include flex(row, space-between, center, nowrap);
+    padding-top: 1rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem ;
     .logo {
         @include flex(row, flex-start, center, nowrap);
         font-size: 0.8rem;
+
+        img {
+            width: 70%;
+        }
         
         
     }
 
     .nav-items {
         @include flex();
-        gap: 1rem;
-        font-size: 0.8rem;
+        gap: 2rem;
+        font-size: 1rem;
+
     }
 
    
