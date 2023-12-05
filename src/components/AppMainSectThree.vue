@@ -53,6 +53,7 @@ export default {
 
 section{
     .container-xl{
+        padding: 2rem;
 
         .list-element {
             @include flex(row, center, center, nowrap);
@@ -65,13 +66,17 @@ section{
     }
 
     .red-stripe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         width: 100%;
-        min-height: 4rem;
+        height: 4rem;
         background-color: $material-sienna;
         color: white;
                 h1 {
                     text-align: center;
+                    padding: 1rem;
                 }
     }
 

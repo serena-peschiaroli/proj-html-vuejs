@@ -1,8 +1,20 @@
 <script>
+import AppMainTitleVue from './AppMainTitle.vue';
 
+export default {
+    components: {
+        AppMainTitleVue
+    }
+}
 </script>
 
 <template>
+
+    <section>
+        <div class="container-m">
+            
+        </div>
+    </section>
 
 </template>
 
