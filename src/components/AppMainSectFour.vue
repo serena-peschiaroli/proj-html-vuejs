@@ -28,7 +28,7 @@ export default {
             const resolutionAndExtension = image.substring(lastDashIndex + 1);
             let updatedResolution;
 
-            // Assuming that this.selectedArticleData is a string representing the selected article image
+            
             if (image === this.selectedArticle) {
             updatedResolution = '300x400';
             } else {
