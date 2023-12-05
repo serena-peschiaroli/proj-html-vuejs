@@ -18,6 +18,7 @@ export default {
                 {image: 'avada-charity-fair-trade-featured-200x150.jpg'},
 
             ],
+            
         }
     },
 }
@@ -30,7 +31,7 @@ export default {
             <AppMainTitleVue :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
 
             <div class="list-element">
-                <AppSectThreePhotoList v-for="(image, index) in imageListElements" :key="index" :image="image.image" />
+                <AppSectThreePhotoList v-for="(image, index) in imageListElements" :isColumn="false" :key="index" :image="image.image" />
             </div>
 
         </div>
