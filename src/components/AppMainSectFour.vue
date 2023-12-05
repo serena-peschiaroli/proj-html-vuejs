@@ -16,7 +16,7 @@ export default {
                 {image:'photo-1447430617419-95715602278e-177x142.jpg', title: 'Title title two', text: 'Lorem Ipsum dolor sit amet'},
                 {image:'photo-1460230525622-630fe3294cd7-177x142.jpg', title: 'Title title three', text: 'Lorem Ipsum dolor sit amet'},
                 {image:'photo-1460600421604-5e138c208b9c-177x142.jpg', title: 'Title title four', text: 'Lorem Ipsum dolor sit amet'},
-                {image:'photo-1444213007800-cff19e1677ac-200x150.jpg', title: 'Title title four', text: 'Lorem Ipsum dolor sit amet'},
+                {image:'photo-1444213007800-cff19e1677ac-400X300.jpg', title: 'Title title four', text: 'Lorem Ipsum dolor sit amet'},
 
             ],
             selectedArticle: null,
@@ -52,7 +52,7 @@ export default {
 <template>
 
     <section>
-        <div class="container-m">
+        <div class="container-lg">
             <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
             <div class="article-wrapper">
                 <div class="selected-article">
@@ -71,6 +71,9 @@ export default {
 
 
             </div>
+            <div class="btn-btn-link"> 
+                <a href=""> other other</a>
+            </div>
             
         </div>
     </section>
@@ -83,14 +86,36 @@ export default {
 @use "../style/partial/mixin" as *;
 
 
-.container-m{
+.container-lg{
+    padding: 1rem;
 
     .article-wrapper {
-        @include flex(row, center, center, nowrap)
+        @include flex(row, space-between, flex-start, nowrap);
+
     }
 
     .article-list {
+        @include flex(column, center, center, nowrap)
         
+        
+    }
+    .selected-article {
+        @include flex(column, center, center, nowrap)
+      
+    }
+
+    .btn-btn-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        background-color: $material-sienna;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
     }
 }
 
