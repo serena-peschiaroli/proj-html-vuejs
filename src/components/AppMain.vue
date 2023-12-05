@@ -1,11 +1,13 @@
 <script>
 import AppMainSectOneVue from './AppMainSectOne.vue';
 import AppMainSectTwo from './AppMainSectTwo.vue';
+import AppMainSectThree from './AppMainSectThree.vue';
 
 export default {
     components: {
         AppMainSectOneVue,
         AppMainSectTwo,
+        AppMainSectThree,
     },
     data() {
         return {
@@ -19,6 +21,7 @@ export default {
 <template>
     <AppMainSectOneVue />
     <AppMainSectTwo />
+    <AppMainSectThree />
 
 </template>
 

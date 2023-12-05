@@ -53,10 +53,12 @@ section {
     background-position: center;
     background-size: cover;
     color: white;
+    padding: 1rem;
 
 
     .list-item {
-        @include flex(row, space-between, center, nowrap)
+        @include flex(row, space-between, center, nowrap);
+        padding: 2rem,
     }
 }
 
