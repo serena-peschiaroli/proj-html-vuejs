@@ -27,7 +27,6 @@ export default {
     },
     created(){
     
-    
         this.selectedArticle = this.listItem[4];
         this.displayedArticle = this.selectedArticle;
     },
