@@ -1,5 +1,5 @@
 <script>
-import AppMainSectOneVue from './AppMainSectOne.vue';
+import AppMainSectOne from './AppMainSectOne.vue';
 import AppMainSectTwo from './AppMainSectTwo.vue';
 import AppMainSectThree from './AppMainSectThree.vue';
 import AppMainSectFour from './AppMainSectFour.vue';
@@ -8,7 +8,7 @@ import AppFooter from './AppFooter.vue';
 
 export default {
     components: {
-        AppMainSectOneVue,
+        AppMainSectOne,
         AppMainSectTwo,
         AppMainSectThree,
         AppMainSectFour,
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-    <AppMainSectOneVue />
+    <AppMainSectOne />
     <AppMainSectTwo />
     <AppMainSectThree />
     <AppMainSectFour />

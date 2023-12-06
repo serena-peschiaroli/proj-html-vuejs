@@ -12,8 +12,7 @@ export default {
         return{
             mainTitle: 'Main Title',
             subTitle: 'sub Title',
-            title: 'title',
-            subtitle: 'lorem ipsum',
+            
         }
     }
 }
@@ -23,12 +22,12 @@ export default {
 <template>
     <section>
         <div class="container-xs">
-            <div class="title">
-                <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
-            </div>
             <div class="cta">
-               <AppHeaderJumbotron :title="title" :subtitle="subtitle" /> 
+                <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
+
+
             </div>
+            
             
             
 
@@ -52,7 +51,7 @@ section {
         padding: 1rem;
         
     }
-    .title {
+    .cta {
         margin-top: 2rem;
     }
 }

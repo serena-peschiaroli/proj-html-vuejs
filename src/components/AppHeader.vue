@@ -1,13 +1,13 @@
 <script>
 import AppHeaderItemLinkVue from './AppHeaderItemLink.vue';
-import AppHeaderJumbotron from './AppHeaderJumbotron.vue';
+
 
 
 
 export default {
     components: {
     AppHeaderItemLinkVue,
-    AppHeaderJumbotron
+   
 },
     data() {
         return {
@@ -19,8 +19,13 @@ export default {
                 {id: 3, text: 'Causes'},
                 {id: 4, text: 'Journal'},
             ], 
+        };
+    },
+    computed: {
+        uppercasetitle: function() {
+      return this.title.toUpperCase();
         }
-    }
+    },
     
 }
 
@@ -39,9 +44,16 @@ export default {
                     
                 </div>
            </div>
-           <div class="jumbotron">
-            <AppHeaderJumbotron :title="title" subTitle="subTitle"/>
-           </div>
+           
+            <div class="hero">
+                <h1 class="title">{{ uppercasetitle }} </h1>
+                <h3 class="subtitle"> {{ subtitle }}</h3>
+                <div class="btn-wrapper">
+                    <h4>Btn here </h4> 
+                    <h4> btn here </h4>
+                </div>
+            </div>
+           
  
         </div>
         
@@ -58,33 +70,57 @@ header {
     background-image: url(../img/home-page-slider.jpg);
     background-position: center;
     background-size: cover;
-}
-.nav {
-    @include flex(row, space-between, center, nowrap);
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem ;
-    .logo {
-        @include flex(row, flex-start, center, nowrap);
-        font-size: 0.8rem;
+    padding-bottom: 3rem;
 
-        img {
-            width: 70%;
+    .container-xl {
+        .nav {
+            @include flex(row, space-between, center, nowrap);
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem ;
+            .logo {
+                @include flex(row, flex-start, center, nowrap);
+                font-size: 0.8rem;
+
+                img {
+                    width: 70%;
+                }
+                
+                
+            }
+
+            .nav-items {
+                @include flex();
+                gap: 2rem;
+                font-size: 1rem;
+
+            }
+        
+            
         }
-        
-        
+
+
+        .hero {
+            margin: 0 auto;
+            padding: 1rem;
+            
+            color: white;
+            @include flex(column, center, center, wrap);
+
+            .title, .subtitle {
+                padding: 1rem;
+            }
+
+            .btn-wrapper {
+                padding: 1rem;
+                margin: 1rem 0.5rem;
+                @include flex(row, space-between, center, nowrap);
+                gap: 2rem,
+            }
+
+        }
+
     }
 
-    .nav-items {
-        @include flex();
-        gap: 2rem;
-        font-size: 1rem;
-
-    }
-
-   
-    
 }
-
-
 </style>
