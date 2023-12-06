@@ -1,11 +1,13 @@
 <script>
 import AppMainTitle from './AppMainTitle.vue';
 import AppSectThreePhotoList from './AppSectThreePhotoList.vue';
+import AppButtonComponent from './AppButtonComponent.vue';
 
 export default {
     components: {
     AppMainTitle,
-    AppSectThreePhotoList
+    AppSectThreePhotoList,
+    AppButtonComponent,
 },
     data() {
         return {
@@ -72,7 +74,7 @@ export default {
 
             </div>
             <div class="btn-btn-link"> 
-                <a href=""> other other</a>
+                <AppButtonComponent variant="red">OTHER</AppButtonComponent>
             </div>
             
         </div>
@@ -105,16 +107,14 @@ export default {
     }
 
     .btn-btn-link {
+        margin-top: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
+        
         width: 100%;
-        background-color: $material-sienna;
-        a{
-            text-decoration: none;
-            color: white;
-        }
+        
+        
 
     }
 }

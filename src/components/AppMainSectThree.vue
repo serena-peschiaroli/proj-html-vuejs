@@ -1,11 +1,13 @@
 <script>
 import AppMainTitleVue from './AppMainTitle.vue';
 import AppSectThreePhotoList from './AppSectThreePhotoList.vue';
+import AppButtonComponent from './AppButtonComponent.vue';
 
 export default {
     components: {
         AppMainTitleVue,
         AppSectThreePhotoList,
+        AppButtonComponent
     },
     data() {
         return {
@@ -36,7 +38,7 @@ export default {
 
         </div>
         <div class="red-stripe">
-            <h1>other causes</h1>
+            <AppButtonComponent variant="red">OTHER</AppButtonComponent>
         </div>
     </section>
 
@@ -65,15 +67,12 @@ section{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
 
         width: 100%;
         height: 4rem;
         background-color: $material-sienna;
-        color: white;
-                h1 {
-                    text-align: center;
-                    padding: 1rem;
-                }
+        
     }
 
 }

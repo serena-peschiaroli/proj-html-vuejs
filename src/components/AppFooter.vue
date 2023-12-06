@@ -31,13 +31,15 @@ export default {
             <div class="logo">
                 <img src="../img/avada-charity-mobile-logo-retina.png"> 
             </div>
-            <div class="container-xl">
+            <div class="container">
                 <div class="credits">
                     <ul>
                         <li v-for="(text, index) in creditTexts" :key="index"> <a href="" >{{ text }}</a></li>
                     </ul>
 
                 </div>
+
+                
                 <div class="social-icons">
 
                     <ul>
@@ -72,63 +74,66 @@ section {
            
            
         }
-        .container-xl {
+        .container {
             background-color: $material-gray;
-        }
+            padding: 0.5;
+        
 
-        .credits {
-           
+            .credits {
+            
 
-            ul {
-                list-style-type: none;
-                @include flex(row, center, center, nowrap);
-                gap: 1rem;
+                ul {
+                    list-style-type: none;
+                    @include flex(row, center, center, nowrap);
+                    gap: 1rem;
 
-                a{
-                    text-decoration: none;
-                    font-size: 0.5rem;
-                    color: $median-tuna;
+                    a{
+                        text-decoration: none;
+                        font-size: 0.5rem;
+                        color: $median-tuna;
+                    }
+                    
                 }
-                
             }
-        }
 
-        .social-icons {
-            @include flex(row, center, center, nowrap);
-
-            ul {
+            .social-icons {
                 @include flex(row, center, center, nowrap);
-                gap: 0.2rem;
-                list-style-type: none;
 
-                li {
-                    padding: 1rem 0;
-                   
+                ul {
+                    @include flex(row, center, center, nowrap);
+                    gap: 0.2rem;
+                    list-style-type: none;
 
+                    li {
+                        padding: 1rem 0;
                     
-                
 
-
-                    a {
-                        font-size: 1rem;
-                        color: $material-putty;
-                        background-color: white;
-                        width: 100px;
-                        height: 90px;
-                        border-radius: 100%;
-                        padding: 0.5rem 0.7rem;
+                        
                     
+
+
+                        a {
+                            font-size: 1rem;
+                            color: $material-putty;
+                            background-color: white;
+                            width: 100px;
+                            height: 90px;
+                            border-radius: 100%;
+                            padding: 0.5rem 0.7rem;
+                        
+                        }
+
+
+
+
                     }
 
-
-
-
                 }
 
             }
 
         }
-    }
+    } 
 }
 
 </style>

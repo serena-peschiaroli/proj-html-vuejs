@@ -101,6 +101,7 @@ export default {
 }
 
 .btn-red {
+  border: transparent;
   padding: 0.5rem 1rem ;
   width: 100%;
   background-color: $material-sienna;
