@@ -1,7 +1,12 @@
 <script>
+import AppButtonComponent from './AppButtonComponent.vue';
 export default {
     props: {
         text: String,
+        specialColorCondition: Boolean,
+    },
+    components:{
+        AppButtonComponent
     },
     computed: {
         uppercaseText: function() {
@@ -13,11 +18,13 @@ export default {
 </script>
 
 <template>
+    
     <ul>
         <li>
-           <a :href="` /${text }`"> {{ uppercaseText }} </a> 
+           <a :class="{ 'special-color': specialColorCondition }" :href="` /${text }`"> {{ uppercaseText }} </a> 
         </li>
     </ul>
+    
 
     
 
@@ -42,6 +49,10 @@ ul {
         
    
         color: $primary-gold;
+
+        &.special-color {
+                    color: $primary-gray;
+        }
     
 
     

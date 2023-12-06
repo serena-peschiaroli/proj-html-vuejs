@@ -16,10 +16,10 @@ export default {
             title: 'make a difference',
             subtitle: 'lorem ipsum dolor',
             navMenu: [
-                {id: 1, text: 'Home'},
-                {id: 2, text: 'Mission'},
-                {id: 3, text: 'Causes'},
-                {id: 4, text: 'Journal'},
+                {id: 1, text: 'Home', specialColorCondition: false},
+                {id: 2, text: 'Mission', specialColorCondition: true},
+                {id: 3, text: 'Causes', specialColorCondition: true},
+                {id: 4, text: 'Journal', specialColorCondition: true},
             ], 
         };
     },
@@ -42,7 +42,8 @@ export default {
                 </div>
                 
                 <div class="nav-items">
-                    <AppHeaderItemLinkVue v-for="item in navMenu" :key="item.id" :text="item.text" />
+                    <AppHeaderItemLinkVue v-for="(item, index) in navMenu" :key="item.id" :text="item.text" :specialColorCondition="index >= navMenu.length - 3"/>
+                    <AppButtonComponent variant="no-margin-golden">DONATE</AppButtonComponent>
                     
                 </div>
            </div>
@@ -92,9 +93,12 @@ header {
             }
 
             .nav-items {
-                @include flex();
+                @include flex(row, center, center, nowrap);
                 gap: 2rem;
                 font-size: 1rem;
+
+
+                
 
             }
         

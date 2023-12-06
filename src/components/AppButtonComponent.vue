@@ -26,6 +26,7 @@ export default {
       // in computed si definiscono differenti classi basati sulle variant
       return {
         'btn-golden': this.variant === 'golden',
+        'btn-no-margin-golden': this.variant === 'no-margin-golden',
         'btn-outlined-golden': this.variant === 'outlined-golden',
         'btn-outlined-grey': this.variant === 'outlined-grey',
         'btn-red': this.variant === 'red',
@@ -65,7 +66,7 @@ export default {
 }
 
 .btn-golden {
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem ;
   background-color: $primary-gold;
   color: white;
   border: transparent;
@@ -73,8 +74,18 @@ export default {
   cursor: pointer;
 }
 
+.btn-no-margin-golden {
+  padding: 0.5rem 1rem ;
+  background-color: $primary-gold;
+  color: white;
+  border: transparent;
+  
+  cursor: pointer;
+}
+
+
 .btn-outlined-golden {
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem ;
   background-color: transparent;
   border: 2px solid $primary-gold;
   color: $primary-gold;
@@ -82,7 +93,7 @@ export default {
 }
 
 .btn-outlined-grey {
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem ;
   background-color: transparent;
   border: 2px solid $primary-gray;
   color: $primary-gray;
@@ -90,7 +101,7 @@ export default {
 }
 
 .btn-red {
-    padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem ;
   width: 100%;
   background-color: $material-sienna;
   color: white;
