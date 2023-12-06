@@ -1,11 +1,11 @@
 <script>
 import AppMainTitle from './AppMainTitle.vue';
-import AppHeaderJumbotron from './AppHeaderJumbotron.vue';
+
 
 export default {
     components: {
         AppMainTitle,
-        AppHeaderJumbotron,
+      
 
     },
     data() {

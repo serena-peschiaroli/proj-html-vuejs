@@ -1,5 +1,6 @@
 <script>
 import AppHeaderItemLinkVue from './AppHeaderItemLink.vue';
+import AppButtonComponent from './AppButtonComponent.vue';
 
 
 
@@ -7,6 +8,7 @@ import AppHeaderItemLinkVue from './AppHeaderItemLink.vue';
 export default {
     components: {
     AppHeaderItemLinkVue,
+    AppButtonComponent,
    
 },
     data() {
@@ -49,8 +51,8 @@ export default {
                 <h1 class="title">{{ uppercasetitle }} </h1>
                 <h3 class="subtitle"> {{ subtitle }}</h3>
                 <div class="btn-wrapper">
-                    <h4>Btn here </h4> 
-                    <h4> btn here </h4>
+                    <AppButtonComponent variant="golden">Golden Button</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-golden">Outlined Golden Button</AppButtonComponent>
                 </div>
             </div>
            
