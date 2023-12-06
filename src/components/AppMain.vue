@@ -3,7 +3,6 @@ import AppMainSectOne from './AppMainSectOne.vue';
 import AppMainSectTwo from './AppMainSectTwo.vue';
 import AppMainSectThree from './AppMainSectThree.vue';
 import AppMainSectFour from './AppMainSectFour.vue';
-import AppMainSecFourTesting from './AppMainSecFourTesting.vue';
 import AppMainSectFive from './AppMainSectFive.vue';
 import AppFooter from './AppFooter.vue';
 
@@ -15,7 +14,7 @@ export default {
         AppMainSectTwo,
         AppMainSectThree,
         AppMainSectFour,
-        AppMainSecFourTesting,
+        
         AppMainSectFive,
         AppFooter
     },
@@ -34,7 +33,6 @@ export default {
     <AppMainSectTwo />
     <AppMainSectThree />
     <AppMainSectFour />
-    <AppMainSecFourTesting  :items="store.articles" class="hidden" />
     <AppMainSectFive />
     <AppFooter />
 
