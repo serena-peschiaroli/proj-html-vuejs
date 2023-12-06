@@ -59,31 +59,42 @@ export default {
 
 
 .btn {
-  padding: 10px 15px;
+  padding: 1rem;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .btn-golden {
-  background-color: goldenrod;
+  padding: 0.8rem 1rem;
+  background-color: $primary-gold;
   color: white;
+  border: transparent;
+  margin-top: 1.5rem;
+  cursor: pointer;
 }
 
 .btn-outlined-golden {
+    padding: 0.8rem 1rem;
   background-color: transparent;
-  border: 2px solid goldenrod;
-  color: goldenrod;
+  border: 2px solid $primary-gold;
+  color: $primary-gold;
+  cursor: pointer;
 }
 
 .btn-outlined-grey {
+    padding: 0.8rem 1rem;
   background-color: transparent;
-  border: 2px solid grey;
-  color: grey;
+  border: 2px solid $primary-gray;
+  color: $primary-gray;
+  cursor: pointer;
 }
 
 .btn-red {
-  background-color: red;
+    padding: 0.8rem 1rem;
+  width: 100%;
+  background-color: $material-sienna;
   color: white;
+  cursor: pointer;
 }
 
 

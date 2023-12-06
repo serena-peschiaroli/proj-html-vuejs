@@ -51,8 +51,8 @@ export default {
                 <h1 class="title">{{ uppercasetitle }} </h1>
                 <h3 class="subtitle"> {{ subtitle }}</h3>
                 <div class="btn-wrapper">
-                    <AppButtonComponent variant="golden">Golden Button</AppButtonComponent>
-                    <AppButtonComponent variant="outlined-golden">Outlined Golden Button</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-grey">click me</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-golden">click me</AppButtonComponent>
                 </div>
             </div>
            

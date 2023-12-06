@@ -1,11 +1,15 @@
 <script>
-import AppMainSectionOneListElementVue from "./AppMainSectionOneListElement.vue"
+
 import AppMainTitle from "./AppMainTitle.vue";
+import AppMainListElement from "./AppMainListElement.vue";
+import AppButtonComponent from "./AppButtonComponent.vue";
 
 export default {
     components: {
-        AppMainSectionOneListElementVue,
+    
         AppMainTitle,
+        AppMainListElement,
+        AppButtonComponent,
        
     },
     data() {
@@ -34,11 +38,12 @@ export default {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem animi ipsa et necessitatibus nesciunt reiciendis veritatis mollitia aliquid. </p>
                 <p>Temporibus doloremque, officia aperiam aspernatur fugit sint maxime optio beatae hic. Maiores.</p>
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis ex illum, accusantium dolore, amet, consequatur</p>
+                <AppButtonComponent variant="golden">click me</AppButtonComponent>
 
             </div>
             <div class="col-s">
 
-                <AppMainSectionOneListElementVue v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" :isAcolumn="false" />
+                <AppMainListElement v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" :isAcolumn="false" :showButton ="false" />
 
 
             </div>
