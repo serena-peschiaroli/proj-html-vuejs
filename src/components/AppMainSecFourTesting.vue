@@ -5,7 +5,7 @@ import AppButtonComponent from './AppButtonComponent.vue';
 
 export default {
     props: {
-        items: Object,
+        items: Array,
     },
     components: {
     AppMainTitle,
@@ -14,18 +14,29 @@ export default {
 },
     data() {
         return {
+            
             mainTitle: 'Main Title',
             subTitle: 'Sub title',
-            selectedItem: null,
-            displayedItem: null,
+            selectedItem: this.items.length > 0 ? this.items[0] : null,
+            displayedItem: this.items.length > 0 ? this.items[0] : null,
         };
+    },
+    watch: {
+    items: {
+        handler(newItems) {
+            this.selectedItem = newItems && newItems.length > 0 ? newItems[0] : null;
+            this.displayedItem = this.selectedItem;
+        },
+        immediate: true, // l'handler è chiamato sul componente creato;
+    },
     },
     created(){
     
         console.log("Received articles in AppMainSectFour:", this.items);
+        console.log('selectedItem', this.selectedItem)
     
-        this.selectedItem = this.items[0];
-        this.displayedItem = this.selectedItem;
+        // this.selectedItem = this.items[0];
+        // this.displayedItem = this.selectedItem;
     },
     methods:{
         
@@ -43,11 +54,7 @@ export default {
             this.displayedItem = item;
         },
         truncateContent(content, length) {
-            if (content.length > length) {
-                return content.substring(0, length) + '...';
-            } else {
-                return content;
-            }
+            return content.length > length ? `${content.slice(0, length)}...` : content;
         },
 
 
@@ -58,46 +65,54 @@ export default {
 <template>
 
     <section>
-        <div class="container-sm">
+        <div class="container-xl">
             <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
             <div class="article-wrapper">
                 
                 <div class="col-l">
 
                
-                    <div class="selected-article">
+                    <div class="selected-article" v-if="selectedItem">
 
                         <div class="card">
-                            <img :src="selectedItem.urlToImage" alt="">
+                            <img :src="selectedItem.urlToImage" alt="" >
                             <div class="title">
-                                <h3> {{ truncateContent(selectedItem.title, 10) }}
+                                <h3> {{ selectedItem.title }}
 
                                 </h3>
                             </div>
                             <div class="body">
-                                <p>  {{ truncateContent(selectedItem.content, 20) }}
+                                <p>  {{selectedItem.content}}
 
                                 </p>
+                                <p> read more at <a href="">{{ selectedItem.url }}  </a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-s">
+                <div class="col-s" v-if="items && items.length > 0">
 
                   
-                    <div class="article-list">
-
-                        <ul>
-                            <li v-for="(item, index) in items" :key="index">
-                                <img class="article-img" :src="item.urlToImage" alt="Photo">
-                                    <p class="title"> {{ truncateContent(item.title, 10) }} </p>
-                                    <p>{{ truncateContent(item.description, 10) }}</p>
-                            </li>
-                        </ul>
-                        
+                    
+                    <div class="card article-list" v-for="(item, index) in items" :key="index">
+                           
+                        <img class="article-img" :src="item.urlToImage" alt="Photo" @click="selectArticle(item)">
+                        <div class="card-text">
+                            <p class="title"> {{ truncateContent(item.title, 20) }} </p>
+                            <p>{{ truncateContent(item.description, 30) }}</p>
+                         </div>
+                                    
+                           
                     </div>
+                        
+                  
                 </div>  
-                
+                <div v-else-if="items && items.length <= 0">
+                     <p>Loading articles...</p>
+                </div>
+                <div v-else>
+                     <p>Error fetching articles. Please try again later.</p>
+                </div>
 
                
 
@@ -118,9 +133,9 @@ export default {
 @use "../style/partial/mixin" as *;
 
 
-.container-sm{
+.container-xl{
     padding: 1rem;
-    @include flex(row, center, center, nowrap);
+    @include flex(column, center, center, nowrap);
     max-height: 600px;
 
     .article-wrapper {
@@ -130,8 +145,11 @@ export default {
             width: 50%;
 
             .selected-article {
+                @include flex(column, center, center, wrap);
                 .card img {
-                    width: 300 px;
+                    width: 300px;
+                    height: 200px;
+                    aspect-ratio: 1;
                 }
 
                 .title {
@@ -144,27 +162,34 @@ export default {
         }
 
         .col-s {
+            @include flex(column, center, stretch, wrap);
+            gap: 1rem;
             overflow-y: scroll;
             width: 40%;
             max-height: 500px;
-            .article-list {
-                @include flex(column, center, center, nowrap);
-                ul {
-                    li{
-                        .article-img {
-                            width: 70px;
-                        }
-                        .title {
-                            color: $primary-gold;
-                        }
 
-                    }
-                }
-                
 
-        
-        
-            }
+                            .article-list {
+                                @include flex(row, flex-start, center, nowrap);
+                                max-height: 500px;
+                            
+                            
+                                .article-img {
+                                    width: 70px;
+                                    height: 60px;
+                                    aspect-ratio: 1;
+                                }
+                                .title {
+                                color: $primary-gold;
+                                }
+
+                                    
+                                
+                                
+
+                        
+                        
+                            }
             
         }
 

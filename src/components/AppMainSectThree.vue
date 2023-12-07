@@ -11,8 +11,8 @@ export default {
     },
     data() {
         return {
-            mainTitle: 'Main Title',
-            subTitle: 'Sub Title',
+            mainTitle: 'Recent causes',
+            subTitle: 'We run project in over 30 countries in 5 continents',
             imageListElements: [
                 {image: 'avada-charity-shelter-featured-200x150.jpg'},
                 {image: 'avada-charity-farming-featured-200x150.jpg'},

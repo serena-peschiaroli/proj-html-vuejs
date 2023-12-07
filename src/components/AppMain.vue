@@ -4,7 +4,7 @@ import AppMainSectTwo from './AppMainSectTwo.vue';
 import AppMainSectThree from './AppMainSectThree.vue';
 import AppMainSectFour from './AppMainSectFour.vue';
 import AppMainSectFive from './AppMainSectFive.vue';
-import AppFooter from './AppFooter.vue';
+
 
 import { store } from '../store';
 
@@ -16,7 +16,7 @@ export default {
         AppMainSectFour,
         
         AppMainSectFive,
-        AppFooter
+        
     },
     data() {
         return {
@@ -34,7 +34,7 @@ export default {
     <AppMainSectThree />
     <AppMainSectFour />
     <AppMainSectFive />
-    <AppFooter />
+   
 
 
 </template>

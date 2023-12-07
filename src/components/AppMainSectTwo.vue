@@ -8,17 +8,18 @@ export default {
         AppMainTitle,
         AppMainListElement,
         AppButtonComponent,
+        
     },
     data() {
         return {
             listItems: [
-                { iconClass: "fa-solid fa-droplet", number: 'text', text: 'text'},
-                { iconClass:'fa-solid fa-stethoscope', number:' text', text: 'text' },
-                { iconClass: 'fa-solid fa-graduation-cap', number: 'text', text: 'text'},
-                { iconClass: 'fa-solid fa-wheat-awn', number: 'text', text: 'text'},
+                { iconClass: "fa-solid fa-droplet", number: 'Clean Water', text: 'Lorem Ipsum Dolor si Amet, Lorem ipsum dolor si amet'},
+                { iconClass:'fa-solid fa-stethoscope', number:' Vaccination', text: 'Lorem Ipsum Dolor si Amet, Lorem ipsum dolor si amet' },
+                { iconClass: 'fa-solid fa-graduation-cap', number: 'Education', text: 'Lorem Ipsum Dolor si Amet, Lorem ipsum dolor si amet'},
+                { iconClass: 'fa-solid fa-wheat-awn', number: 'Farming', text: 'Lorem Ipsum Dolor si Amet, Lorem ipsum dolor si amet'},
             ],
-            mainTitle: "Main Title",
-            subTitle: "sub title"
+            mainTitle: "our values",
+            subTitle: "Think big. Act Bigger"
         }
     }
 
@@ -64,8 +65,9 @@ section {
 
 
     .list-item {
-        @include flex(row, space-between, center, nowrap);
-        padding: 2rem,
+        @include flex(row, space, center, nowrap);
+        gap: 1rem;
+        padding-bottom: 4rem;
     }
 }
 

@@ -12,8 +12,8 @@ export default {
     },
     data() {
         return{
-            mainTitle: 'Main Title',
-            subTitle: 'sub Title',
+            mainTitle: 'Change a life today',
+            subTitle: "As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life. Get in touch and start making the difference",
             
         }
     }

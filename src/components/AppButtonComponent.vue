@@ -18,7 +18,7 @@ export default {
       type: String,
       default: 'default', // settare un default value
       validator: (value) =>
-        ['golden', 'outlined-golden', 'outlined-grey', 'red'].includes(value),
+        ['golden', 'outlined-golden', 'no-margin-golden', 'outlined-grey', 'red'].includes(value),
     },
   },
   computed: {

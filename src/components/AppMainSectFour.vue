@@ -11,14 +11,14 @@ export default {
 },
     data() {
         return {
-            mainTitle: 'Main Title',
-            subTitle: 'Sub title',
+            mainTitle: 'Latest Article',
+            subTitle: 'Together we make all the difference',
             listItem: [
-                {image:'photo-1444664597500-035db93e2323-177x142.jpg', title: 'Title title one', text: 'Lorem Ipsum dolor sit amet'},
-                {image:'photo-1447430617419-95715602278e-177x142.jpg', title: 'Title title two', text: 'Lorem Ipsum dolor sit amet'},
-                {image:'photo-1460230525622-630fe3294cd7-177x142.jpg', title: 'Title title three', text: 'Lorem Ipsum dolor sit amet'},
-                {image:'photo-1460600421604-5e138c208b9c-177x142.jpg', title: 'Title title four', text: 'Lorem Ipsum dolor sit amet'},
-                {image:'photo-1444213007800-cff19e1677ac-400X300.jpg', title: 'Title title four', text: 'Lorem Ipsum dolor sit amet'},
+                {image:'photo-1444664597500-035db93e2323-177x142.jpg', title: 'The human story of uniqueness', text: 'Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet '},
+                {image:'photo-1447430617419-95715602278e-177x142.jpg', title: 'Sustainable trade tactics', text: 'Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet'},
+                {image:'photo-1460230525622-630fe3294cd7-177x142.jpg', title: 'Farmers making a difference', text: 'Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet'},
+                {image:'photo-1460600421604-5e138c208b9c-177x142.jpg', title: 'Meeting remote tribes in Peru', text: 'Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet'},
+                {image:'photo-1444213007800-cff19e1677ac-400X300.jpg', title: 'Understanding community complexity', text: 'Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet'},
 
             ],
             selectedArticle: null,
@@ -53,7 +53,7 @@ export default {
 <template>
 
     <section>
-        <div class="container-xs">
+        <div class="container-lg">
             <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
             <div class="article-wrapper">
                 <div class="selected-article">
@@ -73,7 +73,7 @@ export default {
 
             </div>
             <div class="btn-btn-link"> 
-                <AppButtonComponent variant="red">OTHER</AppButtonComponent>
+                <AppButtonComponent variant="red">VIEW ALL OUR ARTICLES</AppButtonComponent>
             </div>
             
         </div>
@@ -87,7 +87,7 @@ export default {
 @use "../style/partial/mixin" as *;
 
 
-.container-xs{
+.container-lg{
     padding: 1rem;
 
     .article-wrapper {

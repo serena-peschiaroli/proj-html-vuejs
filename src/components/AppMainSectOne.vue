@@ -15,9 +15,9 @@ export default {
     data() {
         return {
             listItems: [
-                { iconClass: 'fa-regular fa-heart', number: '2032', text: 'text1' },
-                { iconClass: 'fa-solid fa-globe', number: '132', text: 'text2' },
-                { iconClass: 'fa-solid fa-dollar-sign', number: '3.8M', text: 'text3' },
+                { iconClass: 'fa-regular fa-heart', number: '2032', text: 'Volunteers worldwide' },
+                { iconClass: 'fa-solid fa-globe', number: '132', text: 'Active Project' },
+                { iconClass: 'fa-solid fa-dollar-sign', number: '3.8M', text: 'Donated' },
             ],
             mainTitle: ' Every Moment Counts',
            
@@ -38,7 +38,7 @@ export default {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem animi ipsa et necessitatibus nesciunt reiciendis veritatis mollitia aliquid. </p>
                 <p>Temporibus doloremque, officia aperiam aspernatur fugit sint maxime optio beatae hic. Maiores.</p>
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis ex illum, accusantium dolore, amet, consequatur</p>
-                <AppButtonComponent variant="golden">click me</AppButtonComponent>
+                <AppButtonComponent variant="golden">OUR MISSION</AppButtonComponent>
 
             </div>
             <div class="col-s">
