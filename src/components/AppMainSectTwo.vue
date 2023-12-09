@@ -38,7 +38,7 @@ export default {
                 
             
                 <div class="list-item">
-                    <AppMainListElement  v-for="item in listItems" :key="item.index" :iconClass="item.iconClass" :number="item.number" :text="item.text" :isAcolumn="true" />
+                    <AppMainListElement  v-for="item in listItems" :key="item.index" :iconClass="item.iconClass" :number="item.number" :text="item.text" variant="isColumn" />
                     
 
                 
@@ -65,8 +65,8 @@ section {
 
 
     .list-item {
-        @include flex(row, space, center, nowrap);
-        gap: 1rem;
+        @include flex(row, space-between, center, nowrap);
+        gap: 5rem;
         padding-bottom: 4rem;
     }
 }

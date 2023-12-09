@@ -43,7 +43,7 @@ export default {
             </div>
             <div class="col-s">
 
-                <AppMainListElement v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" :isAcolumn="false" :showButton ="false" />
+                <AppMainListElement v-for="item in listItems" :key="item.number" :iconClass="item.iconClass" :number="item.number" :text="item.text" variant='isRow' :showButton ="false" />
 
 
             </div>

@@ -56,22 +56,27 @@ section {
     margin-top: 2rem;
 
     .container-lg {
-        padding: 3rem;
+        padding: 5rem;
+        
         
     
         .cta {
             @include flex(column, center, center, wrap);
-            margin-top: 2rem;
+            
         
+            width: 80%;
+            margin: 0 auto;
+                 
 
 
         }
 
         .btn-wrapper {
-            width: 60%;
+            width: 90%;
             margin: 0 auto;
             padding: 2rem;
-            @include flex(row, space-between, center, nowrap);
+            @include flex(row, center, center, nowrap);
+            gap: 5rem;;
             
         }
     }

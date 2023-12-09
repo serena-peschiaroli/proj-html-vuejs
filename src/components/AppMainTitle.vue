@@ -7,7 +7,7 @@ export default {
         type: String,
         default: 'app-title',
         validator:(value) =>
-        ['centered', 'start', 'no-hr']
+        ['centered', 'start', 'no-hr'].includes(value),
        }
        
 
@@ -90,6 +90,10 @@ export default {
 
    h3 {
        margin-bottom: 1rem;
+       font-size: 1rem;
+       line-height: 1.5rem;
+       font-weight: lighter
+       
        
    }
 }
@@ -97,6 +101,8 @@ export default {
 
 .is-start {
     @include flex(column, flex-start, flex-start, wrap);
+    gap: 1rem;
+
 
     .golden-title{
        
@@ -111,7 +117,9 @@ export default {
    h3 {
       
        margin-bottom: 0.5rem;
-   }
+       font-size: 0.9rem;
+      
+    }
 
 }
 

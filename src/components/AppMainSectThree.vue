@@ -54,8 +54,8 @@ section{
         padding: 2rem;
 
         .list-element {
-            @include flex(row, center, center, nowrap);
-            gap: 1rem;
+            @include flex(row, space-between, center, nowrap);
+            
             padding-bottom: 1rem;
             margin-top: 1rem;
         }
