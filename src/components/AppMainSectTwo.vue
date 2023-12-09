@@ -33,7 +33,7 @@ export default {
 
     
             <div class="container-xl">
-                <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
+                <AppMainTitle variant="centered" :mainTitle="mainTitle" :subTitle="subTitle"  />
                 
                 
             

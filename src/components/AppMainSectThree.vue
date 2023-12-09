@@ -30,7 +30,7 @@ export default {
 <template>
     <section>
         <div class="container-xl">
-            <AppMainTitleVue :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
+            <AppMainTitleVue :mainTitle="mainTitle" :subTitle="subTitle" variant="centered" />
 
             <div class="list-element">
                 <AppSectThreePhotoList v-for="(image, index) in imageListElements" :isColumn="false" :key="index" :image="image.image" />

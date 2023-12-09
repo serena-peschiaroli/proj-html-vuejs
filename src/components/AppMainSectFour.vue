@@ -54,7 +54,7 @@ export default {
 
     <section>
         <div class="container-lg">
-            <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
+            <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" variant="centered" />
             <div class="article-wrapper">
                 <div class="selected-article">
                     <AppSectThreePhotoList

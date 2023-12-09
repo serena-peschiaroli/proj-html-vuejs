@@ -25,7 +25,7 @@ export default {
     <section>
         <div class="container-lg">
             <div class="cta">
-                <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" :isCentered="true" />
+                <AppMainTitle :mainTitle="mainTitle" :subTitle="subTitle" variant="centered" />
             
 
 
@@ -33,8 +33,8 @@ export default {
             
             <div class="btn-wrapper">
 
-                    <AppButtonComponent variant="outlined-grey">click me</AppButtonComponent>
-                    <AppButtonComponent variant="outlined-grey">click me</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-grey">VOLUTEER</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-grey">DONATE NOW</AppButtonComponent>
 
             </div>
             

@@ -32,7 +32,7 @@ export default {
     <section class="section-one">
         <div class="row">
             <div class="col-l">
-                <AppMainTitle :mainTitle="mainTitle" :isCentered="false"/>
+                <AppMainTitle :mainTitle="mainTitle" variant="start"/>
                 
                 
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem animi ipsa et necessitatibus nesciunt reiciendis veritatis mollitia aliquid. </p>

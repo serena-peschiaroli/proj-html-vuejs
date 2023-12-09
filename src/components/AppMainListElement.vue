@@ -27,7 +27,7 @@ import AppButtonComponent from './AppButtonComponent.vue';
         <div class="text">
           <p>{{ text }}</p>
 
-          <AppButtonComponent v-if="showButton" variant="golden">Click me</AppButtonComponent>
+          <AppButtonComponent v-if="showButton" variant="golden">LEARN MORE</AppButtonComponent>
         </div>
       </div>
 </template>

@@ -1,6 +1,7 @@
 <script>
 import AppHeaderItemLinkVue from './AppHeaderItemLink.vue';
 import AppButtonComponent from './AppButtonComponent.vue';
+import AppMainTitle from './AppMainTitle.vue';
 
 
 
@@ -9,12 +10,13 @@ export default {
     components: {
     AppHeaderItemLinkVue,
     AppButtonComponent,
+    AppMainTitle,
    
 },
     data() {
         return {
-            title: 'make a difference',
-            subtitle: 'lorem ipsum dolor',
+            mainTitle: 'make a difference',
+            subTitle: 'as long as poverty, ingiustice & inequality persist, non of us can truly rest',
             navMenu: [
                 {id: 1, text: 'Home', specialColorCondition: false},
                 {id: 2, text: 'Mission', specialColorCondition: true},
@@ -49,11 +51,10 @@ export default {
            </div>
            
             <div class="hero">
-                <h1 class="title">{{ uppercasetitle }} </h1>
-                <h3 class="subtitle"> {{ subtitle }}</h3>
+                <AppMainTitle variant="no-hr" :mainTitle="mainTitle" :subTitle="subTitle"  />
                 <div class="btn-wrapper">
-                    <AppButtonComponent variant="outlined-grey">click me</AppButtonComponent>
-                    <AppButtonComponent variant="outlined-golden">click me</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-grey">OUR MISSION</AppButtonComponent>
+                    <AppButtonComponent variant="outlined-golden">DONATE NOW</AppButtonComponent>
                 </div>
             </div>
            
@@ -109,13 +110,8 @@ header {
         .hero {
             margin: 0 auto;
             padding: 1rem;
-            
-            color: white;
-            @include flex(column, center, center, wrap);
 
-            .title, .subtitle {
-                padding: 1rem;
-            }
+            @include flex(column, center, center, wrap);
 
             .btn-wrapper {
                 padding: 1rem;
